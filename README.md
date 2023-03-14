@@ -10,5 +10,5 @@ Interact with GPT through this R/Shiny application to process user's request pro
 ## Configuration
 Create a `.Renviron` file and store your OpenAI API key
 ```shell
-OPENAI_KEY=<Your API Key>
+api_key <- <Your API Key>
 ```
