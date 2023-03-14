@@ -1,0 +1,35 @@
+
+body {
+//    background : linear-gradient(-45deg, #7873f5, #ec77ab, #537895, #09203f);
+//    background-size : 1000% 1000%; 
+//    animation : gradient 15s ease infinite;
+}
+
+#chat_window{
+  color : #96ef07; 
+  font-size : 12px;
+  white-space : pre-wrap; 
+  font-style : italic;
+  overflow-y : scroll; 
+  height : 800px;
+  max-height : 800px;
+  background : #141d2b;
+}
+
+#users{ 
+  white-space: break-spaces;
+  color : #96ef07;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
