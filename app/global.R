@@ -23,17 +23,11 @@ api_key <- Sys.getenv("OPENAI_API")
 
 intro <- "
 ###########################################
-
 **** Welcome to GTP Assistant Chatbox ****
-
 ###########################################
 "
 
-if (file.exists("chat_txt.Rds")) {
-  val$txt <- readRDS("chat_txt.Rds")
-} else {
-  val$txt <- intro
-}
+val$txt <- intro
 
 jsCode <- "
 // send message on enter

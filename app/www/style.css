@@ -11,9 +11,22 @@ body {
   white-space : pre-wrap; 
   font-style : italic;
   overflow-y : scroll; 
-  height : 800px;
-  max-height : 800px;
+  height : 600px;
+  max-height : 600px;
   background : #141d2b;
+}
+
+@media only screen and (max-width: 400px) {
+  #chat_window{
+    color : #96ef07; 
+    font-size : 12px;
+    white-space : pre-wrap; 
+    font-style : italic;
+    overflow-y : scroll; 
+    height : 450px;
+    max-height : 450px;
+    background : #141d2b;
+  }
 }
 
 #users{ 

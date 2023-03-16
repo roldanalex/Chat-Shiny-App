@@ -9,7 +9,7 @@ server <- function(input, output, session) {
       "Welcome to GTP Assistant App",
       html = TRUE,
       text = tagList(
-        textInput("uname", "Please rename yourself", value = username),
+        textInput("uname", "Please name yourself", value = username),
       ),
       closeOnEsc = FALSE,
       closeOnClickOutside = FALSE,
@@ -70,8 +70,6 @@ server <- function(input, output, session) {
       val$txt <- paste(val$txt, new_prompt, new_answer, " ", sep = "\n")
       
       updateTextInput(session, "text_msg", value = "")
-      
-      saveRDS(val$txt, "chat_txt.Rds")
       
     }
   })

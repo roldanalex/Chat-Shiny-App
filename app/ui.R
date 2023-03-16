@@ -9,7 +9,7 @@ ui <- fluidPage(
   extendShinyjs(text = jsCode, functions = c()),
   fluidRow(
     column(width = 6,
-           h2("GTP Assistant App")),
+           h2("GTP Assistant")),
     column(
       width = 6,
       align = "right",
@@ -17,7 +17,8 @@ ui <- fluidPage(
       htmlOutput("logged_usr")
     )
   ),
-  div(style = "height : 500px;",
+  div(
+    style = "height : 500px;",
       fluidRow(
         column(
           width = 10,
