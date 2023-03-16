@@ -61,9 +61,9 @@ server <- function(input, output, session) {
       
       answer <- ask_chatgpt(input$text_msg)
       
-      new_prompt <- paste(Sys.time(), "#", input$uname, ":" , input$text_msg)
+      new_prompt <- paste(format(Sys.time(), "%d%b%y %H:%M"), "#", input$uname, ":" , input$text_msg)
       
-      prompt_answ <- paste(Sys.time(), "# GTP Assistant :")
+      prompt_answ <- paste(format(Sys.time(), "%d%b%y %H:%M"), "# GTP Assistant :")
       
       new_answer <- paste(prompt_answ, answer, sep = "\n") 
       

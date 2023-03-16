@@ -1,10 +1,14 @@
 
 ui <- fluidPage(
-  theme = shinytheme("cyborg"),
+  theme = shinytheme("superhero"),
   shinyjs::useShinyjs(),
   useShinyalert(),
   tags$head(
-    tags$link(rel = "stylesheet", type = "text/css", href = "style.css")
+    # tags$link(rel = "stylesheet", type = "text/css", href = "style.css")
+    tags$link(rel="shortcut icon", href="favicon.ico"), #Icon for browser tab
+    #Including Google analytics and Cookie control
+    includeCSS("www/style.css"),
+    tags$title("GTP Assistant")
   ),
   extendShinyjs(text = jsCode, functions = c()),
   fluidRow(
