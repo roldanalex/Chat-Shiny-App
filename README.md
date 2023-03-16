@@ -8,7 +8,7 @@ Interact with GPT through this R/Shiny application to process user's request pro
 <img src="figs/GTP_Assistant_Shiny_App.png" alt="GTP Example Full">
 
 ## Preview - Mobile Version
-<img src="figs/Mobile-GTP-Chat.jpeg" alt="GTP Example Mobile">
+<img width="400px" src="figs/Mobile-GTP-Chat.jpeg" alt="GTP Example Mobile">
 
 ## Configuration
 Create a `.Renviron` file and store your OpenAI API key
