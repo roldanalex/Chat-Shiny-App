@@ -12,9 +12,9 @@ val <- reactiveValues(txt = NULL, users = c(),
 api_key <- Sys.getenv("OPENAI_API")
 
 intro <- "
-###########################################
-**** Welcome to GTP Assistant Chatbox ****
-###########################################
+#########################################
+** Welcome to my Personal AI Assistant **
+#########################################
 "
 
 val$txt <- intro
@@ -45,20 +45,34 @@ function scrollToBottom(){
   elem.scrollTop = elem.scrollHeight;
 }"
 
+prompt_history <- list()
+
 # Calls the ChatGPT API with the given prompt and returns the answer
 ask_chatgpt <- function(prompt) {
+
+  prompt_history <<- append(prompt_history, list(list(
+    role = "user", 
+    content = prompt
+    )))
+
   response <- POST(
-    url = "https://api.openai.com/v1/chat/completions", 
+    url = Sys.getenv("OPENAI_COMPLETION_URL"),
     add_headers(Authorization = paste("Bearer", api_key)),
     content_type_json(),
     encode = "json",
     body = list(
       model = "gpt-3.5-turbo",
-      messages = list(list(
-        role = "user", 
-        content = prompt
-      ))
+      messages = prompt_history
     )
   )
-  str_trim(content(response)$choices[[1]]$message$content)
+  
+  result_prompt <- str_trim(content(response)$choices[[1]]$message$content)
+
+  prompt_history <<- append(prompt_history, list(list(
+    role = "assistant", 
+    content = result_prompt
+  )))
+
+  return(result_prompt)
+
 }

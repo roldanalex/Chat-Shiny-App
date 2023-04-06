@@ -6,7 +6,7 @@ server <- function(input, output, session) {
     username <- paste0("Username")
     shinyalert(
       inputId = "username" ,
-      "Welcome to GTP Assistant App",
+      "Welcome to my Personal AI Assistant",
       html = TRUE,
       text = tagList(
         textInput("uname", "Please name yourself", value = username),

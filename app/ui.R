@@ -8,12 +8,12 @@ ui <- fluidPage(
     tags$link(rel="shortcut icon", href="favicon.ico"), #Icon for browser tab
     #Including Google analytics and Cookie control
     includeCSS("www/style.css"),
-    tags$title("GTP Assistant")
+    tags$title("Personal AI Assistant")
   ),
   extendShinyjs(text = jsCode, functions = c()),
   fluidRow(
     column(width = 6,
-           h2("GTP Assistant")),
+           h2("Personal AI Assistant")),
     column(
       width = 6,
       align = "right",
@@ -32,8 +32,8 @@ ui <- fluidPage(
         ),
         column(
           width = 2,
-          h5("Active Users"),
-          hr(),
+          # h5("Active Users"),
+          # hr(),
           textOutput("users"))
         )
       ),
