@@ -65,7 +65,7 @@ ask_chatgpt <- function(prompt) {
       messages = prompt_history
     )
   )
-  
+
   result_prompt <- str_trim(content(response)$choices[[1]]$message$content)
 
   prompt_history <<- append(prompt_history, list(list(
